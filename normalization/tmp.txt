@@ -1,0 +1,13 @@
+def _compute_default_nuv(self, n_points):
+    """
+        Default nu and nv for given number of points inside of quad.
+        :return: (nu, nv)
+        """
+    assert self.quad is not None
+    dv = la.norm(self.quad[(0), :] - self.quad[(1), :])
+    du = la.norm(self.quad[(2), :] - self.quad[(1), :])
+    nv = np.sqrt(n_points * dv \/ du)
+    nu = nv * du \/ dv
+    nuv = np.array([np.floor(nu \/ 3), np.floor(nv \/ 3)]) - self._degree
+    self.nuv = np.maximum(1, nuv)
+    return self.nuv

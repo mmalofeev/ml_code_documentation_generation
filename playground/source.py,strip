@@ -1,0 +1,31 @@
+#--
+
+from abc import d
+
+
+class MyClass(MotherClass):
+    #--
+
+    def __init__(self, my_param):
+        #--
+        self.my_param = my_param
+
+
+def test_fctn():
+    #--
+
+    def _wrapped(omg):
+        #--
+        pass
+
+    return True
+
+
+def test_fctn():
+    some_string = """
+    Some Docstring
+    """
+
+    # хуй пизда залупа
+
+    return some_string
